@@ -1,6 +1,6 @@
 (function(root, $){
 
-    var ns = 'SApi';
+    var ns = 'QBClient';
 
     var Api = function(config) {
 
