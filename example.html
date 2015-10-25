@@ -1,0 +1,54 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Quick BE Example</title>
+
+</head>
+
+<body>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="src/api.js"></script>
+
+<script>
+
+    var api = new SApi({
+        url : "//localhost:1983",
+        crossDomain : true
+    });
+
+    var doRegister = api.register('me@me.com', 'abc123');
+
+    doRegister.done(function(){
+
+        var doAuth = api.authenticate('me@me.com', 'abc123');
+
+        doAuth.done(function(){
+
+            var makeCar = api.save('car', {
+                make : "Plymouth",
+                model : "Reliant"
+            });
+
+            makeCar.done(function(){
+
+                var findCars = api.find('car');
+
+                findCars.done(function(results){
+                    console.log(results);
+                });
+
+            });
+
+        });
+
+    });
+
+</script>
+
+
+</body>
+</html>

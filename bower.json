@@ -1,0 +1,19 @@
+{
+  "name": "quick-be-client",
+  "version": "1.0.0",
+  "authors": [
+    "Daniel O'Donnell <dan@dvoc.ca>"
+  ],
+  "main": "src/api.js",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
